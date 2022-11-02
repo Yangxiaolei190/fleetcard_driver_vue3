@@ -1,0 +1,5 @@
+
+# ESlint过滤规则
+dist
+node_modules
+!.prettierrc.js

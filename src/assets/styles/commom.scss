@@ -1,0 +1,85 @@
+html body {
+  color: $font;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: $font;
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+// 设置滚动
+@mixin scroll-edit {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// 清除浮动
+@mixin clear {
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin warp-shadow {
+  box-shadow: 0 0 10px #eeeeee;
+}
+
+// 充满父级
+@mixin full {
+  width: 100%;
+  height: 100%;
+}
+
+// 定位到父级中央
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 文字溢出出现省略号
+@mixin overflow-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 展示版块
+.show {
+  display: block !important;
+}
+
+// 按钮100%宽度
+button[block] {
+  width: 100%;
+}
+
+// 获取验证码按钮内容样式
+.captcha-btn {
+  cursor: pointer;
+  width: 92px;
+  text-align: center;
+  &:active {
+    opacity: .7;
+  }
+}
+
+// 鼠标效果 hover, active效果
+[mouse] {
+  &:hover, &:active {
+    opacity: .7;
+  }
+}
